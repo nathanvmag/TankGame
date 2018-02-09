@@ -13,7 +13,9 @@ public class CannonMove : MonoBehaviour {
 	void Update () {
        if (Input.GetMouseButtonDown(0))
         {
-           Instantiate(bullet, transform.FindChild("Pfogo").transform.position, transform.rotation);
+          PhotonNetwork.Instantiate(bullet.name, transform.Find("Pfogo").transform.position, transform.rotation,0);
+            Debug.Log("heyu");
+
         }
     }
     IEnumerator lookat()

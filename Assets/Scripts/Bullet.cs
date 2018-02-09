@@ -34,6 +34,6 @@ public class Bullet : MonoBehaviour {
     {
         Debug.Log("aqui");
         yield return new WaitForSeconds(2);
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(GetComponent<PhotonView>());
     }
 }
